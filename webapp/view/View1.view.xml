@@ -1,0 +1,37 @@
+<mvc:View controllerName="fullapp.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"  xmlns:html="http://www.w3.org/1999/xhtml">
+    <App id="app">
+    <Shell backgroundColor="blue">
+    <Page id="page" title="{i18n>title}" class="Page1">
+        <content >
+       <Panel class="LoginPanel" >
+       <Image class="LoginImg" src="https://icon-library.com/images/username-icon/username-icon-3.jpg"></Image>
+       <html:div class="inputContainer">
+       <Input placeholder="Username" 
+              width="25%"
+              value="{/userName}"
+              valueLiveUpdate="true"
+            />
+            <html:br/>
+            <Input placeholder="Password" 
+                   width="25%"
+                   type="Password"
+                   value="{/Password}"
+                   valueLiveUpdate="true"
+            />
+        </html:div>
+        <html:div class="LoginButtonContainer">
+        <Button text="Login"
+                press="login">
+        </Button>
+        <Button text="Sign Up" press="signUp">
+        </Button>
+        </html:div>
+       </Panel>
+       
+  </content>
+    </Page>
+    </Shell>
+    </App>
+</mvc:View>

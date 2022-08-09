@@ -1,0 +1,168 @@
+{
+    "_version": "1.28.0",
+    "sap.app": {
+        "id": "fullapp",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap-ux/fiori-freestyle-writer:basic",
+            "version": "0.11.15",
+            "toolsId": "901cc128-12fb-4771-a367-7003b9639b42"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/iwbep/GWSAMPLE_BASIC/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": false,
+        "rootView": "fullapp.view.App",
+        "dependencies": {
+            "minUI5Version": "1.84.14",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "fullapp.i18n.i18n"
+                }
+            },
+            "mainService": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {}
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "fullapp.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "transition":"slide"
+            },
+            "routes": [
+                {
+                    "name": "TargetView1",
+                    "pattern": "",
+                    "target": "TargetView1"
+                },
+                {
+                    "name": "TargetView2",
+                    "pattern": "Home",
+                    "target":"TargetView2"
+                },
+                {
+                    "name":"TargetView3",
+                    "pattern":"List",
+                    "target":"TargetView3"
+                },
+                {
+                    "name": "TargetView4",
+                    "pattern": "List1",
+                    "target":"TargetView4"
+                },
+                {
+                    "name": "TargetView5",
+                    "pattern": "List2",
+                    "target":"TargetView5"
+                },
+                {
+                    "name": "TargetView6",
+                    "pattern": "List3/{BusinessPartner}",
+                    "target":"TargetView6"
+                },
+                {
+                    "name": "TargetView7",
+                    "pattern": "Signup",
+                    "target":"TargetView7"
+                }
+            ],
+            "targets": {
+                "TargetView1": {              
+                    "viewName": "View1",
+                    "viewLevel": 1
+                },
+                "TargetView2":{
+                    "viewName": "Home",
+                    "viewLevel": 2
+                },
+                "TargetView3":{
+                    "viewName": "BusinessList",
+                    "viewLevel": 3
+                },
+                "TargetView4":{
+                    "viewName": "ProductList",
+                    "viewLevel": 3
+
+                },
+                "TargetView5":{
+                    "viewName": "SalesList",
+                    "viewLevel": 3
+                },
+                "TargetView6":{
+                    "viewName": "Detail",
+                    "viewLevel": 4
+                },
+                "TargetView7":{
+                    "viewName": "Signup"                  
+                }
+            }
+        }  
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "fullapp"
+    }
+}

@@ -1,0 +1,23 @@
+<xml:View
+ xmlns="sap.m"
+ xmlns:mvc="sap.ui.core.mvc"
+ xmlns:html="http://www.w3.org/1999/xhtml"
+ controllerName="fullapp.controller.BusinessList">
+<Page            showNavButton="true"
+                 navButtonPress="backButton">
+<content>
+<List class="List"
+     headerText="Sales Orders"
+     items="{mainService>/SalesOrderSet}"
+     enableBusyIndicator="true">
+     <items>
+     <StandardListItem class="product"
+                    title=" SalesOrderID -{mainService>SalesOrderID}"
+                    description="NetAmount-{mainService>NetAmount}"
+                    info="Currency-{mainService>CurrencyCode}">
+    </StandardListItem>
+     </items>
+</List>
+</content>
+</Page>
+</xml:View>

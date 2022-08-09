@@ -1,0 +1,39 @@
+<xml:View controllerName="fullapp.controller.Home"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+xmlns:html="http://www.w3.org/1999/xhtml">
+<App id="app">
+<Page>
+<headerContent>
+<Button 
+       text="Sign out"
+       press="Signout"
+       icon="sap-icon://employee-rejections"></Button>
+</headerContent>
+<content >
+<html:div class="MainBody">
+<html:div class="ButtonHolder">
+<GenericTile
+            class="BusinessButtons"        
+            sizeBehavior="Responsive"
+            press=".BusinessTilePress"
+            >
+</GenericTile>    
+<GenericTile
+            class="ProductButtons"        
+            sizeBehavior="Responsive"
+            press=".ProductTilePress"
+            >
+</GenericTile>
+<GenericTile
+            class="SalesButtons"        
+            sizeBehavior="Responsive"
+            press=".SalesTilePress"
+            >
+</GenericTile>
+</html:div>
+</html:div>
+</content>
+</Page>
+</App>
+</xml:View>

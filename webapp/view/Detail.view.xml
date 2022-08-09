@@ -1,0 +1,31 @@
+<xml:View   controllerName="fullapp.controller.Detail"
+            xmlns="sap.m"
+            xmlns:mvc="sap.ui.core.mvc"
+            xmlns:html="http://www.w3.org/1999/xhtml"
+            xmlns:core="sap.ui.core">
+        <App id="app">
+            <Page class="DetailPage"
+                  title="DETAILS"
+                  backgroundDesign="Transparent"
+                  showNavButton="true"
+                 navButtonPress="BackButton"
+                >   
+                <headerContent>
+                <Button text="Refresh" press="refresh" icon="sap-icon://mirrored-task-circle-2"></Button>
+                </headerContent>
+                <content>
+                    <List
+                        id="oddIdList"
+                        items="{mainService>/BusinessPartnerSet}">
+                            <ObjectListItem 
+                                class="listItem"
+                                title="{mainService>CompanyName}"
+                                number="BusinessPartnerID-{mainService>BusinessPartnerID}, PhoneNumber-{mainService>PhoneNumber}, WebAddress-{mainService>WebAddress}"
+                            >
+                  
+                            </ObjectListItem>
+                    </List>
+                </content> 
+            </Page>
+        </App>
+</xml:View>

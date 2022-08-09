@@ -1,0 +1,24 @@
+<xml:View
+         xmlns="sap.m"
+         xmlns:mvc="sap.ui.core.mvc"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         controllerName="fullapp.controller.BusinessList">
+         <App id="app">
+         <Page   showNavButton="true"
+                 navButtonPress="backButton">
+         <content>
+         <List class="List"
+              headerText="PRODUCTS"
+              items="{mainService>/ProductSet}">
+              <items>
+              <ObjectListItem class="product"
+                             title="{mainService>Name}-{mainService>ProductID}"
+                             number="{mainService>Price}"
+                             numberUnit="{mainService>CurrencyCode}">          
+                </ObjectListItem>
+              </items>
+         </List>
+         </content>
+         </Page>
+         </App>
+</xml:View>

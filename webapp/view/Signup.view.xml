@@ -1,0 +1,39 @@
+<xml:View
+         xmlns="sap.m"
+         xmlns:core="sap.ui.core"
+         xmlns:mvc="sap.ui.core.mvc"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         controllerName="fullapp.controller.Signup">
+         
+         <html:div 
+                  style="background-image:url('https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg'); 
+                  height:100%;
+                  background-size: cover;">
+         <html:div class="Titlediv">
+         <html:h2>
+         App One
+         </html:h2>
+         <html:div style="padding-left:32%">
+         <Input placeholder="Username"
+                value="{/userName}"
+                valueLiveUpdate="true"
+                width="64%"></Input>
+         </html:div>
+         <html:div style="padding-left:32%">
+         <Input placeholder="Password"
+                 type="Password"
+                value="{/Password}"
+                valueLiveUpdate="true"
+                width="64%"></Input>
+         </html:div>
+         <html:div style="margin-left:44%">
+         <Button text="Sign Up" press="SignUp">
+        </Button>
+        <Button text="Back" press="Back">
+        </Button>
+        </html:div>
+        
+         </html:div>
+         </html:div>
+         
+</xml:View>

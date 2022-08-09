@@ -1,0 +1,34 @@
+<xml:View controllerName="fullapp.controller.BusinessList"
+ xmlns="sap.m"
+ xmlns:mvc="sap.ui.core.mvc"
+ xmlns:html="http://www.w3.org/1999/xhtml"
+ xmlns:core="sap.ui.core">
+ <App id="app">
+<Page showNavButton="true"
+      navButtonPress="backButton"
+      backgroundDesign="Transparent">     
+<content>
+<List class="List"
+
+     headerText="BUSINESS PARTNERS"
+     items="{mainService>/BusinessPartnerSet}"
+     enableBusyIndicator="true"
+     mode = "SingleSelectMaster"
+     itemPress="listItemClick"
+          
+     >
+     <items >
+     <ObjectListItem
+                    title="{mainService>CompanyName}"
+                    type="Active"
+                    >
+                    <customData>
+									<core:CustomData key="colour" value="style1" writeToDom="true"/>
+					</customData>
+    </ObjectListItem>
+     </items>
+</List>
+</content>
+</Page>
+</App>
+</xml:View>
