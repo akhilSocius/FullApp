@@ -15,6 +15,19 @@
             "version": "0.11.15",
             "toolsId": "901cc128-12fb-4771-a367-7003b9639b42"
         },
+        "crossNavigation":{
+            "inbounds":{
+               "deploytest":{
+                   "signature":{
+                       "parameters":{},
+                       "additionalParameters":"allowed"
+                   },
+                   "hideLauncher":false,
+                   "semanticObject":"AppOne",
+                   "action":"AppOne"
+        }
+        }
+        },
         "dataSources": {
             "mainService": {
                 "uri": "/sap/opu/odata/iwbep/GWSAMPLE_BASIC/",

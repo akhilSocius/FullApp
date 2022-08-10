@@ -19,7 +19,7 @@ modules:
         name: fullapp-uaa-key
   parameters:
     content:
-      instance:
+      subaccount:
         destinations:
         - Name: fullapp_html_repo_host
           ServiceInstanceName: fullapp-html5-srv
